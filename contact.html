@@ -350,6 +350,30 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let event = [];
+            event.push('event');
+            event.push('user_interact');
+            const eventData = {
+                type: 'quote',
+                date: new Date().getTime()
+            };
+            event.push(eventData);
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push(event);
+
+            let event2 = [];
+            event2.push('event');
+            event2.push('user_status');
+            const even2tData = {
+                type: 'registered',
+                date: new Date().getTime()
+            };
+            event2.push(event2Data);
+            window.dataLayer.push(event2);
+        });
+    </script>
 </body>
 
 </html>
